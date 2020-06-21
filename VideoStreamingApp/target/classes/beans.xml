@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+		<bean id="videoStreamingObj" class="com.llearning.VideoStreamingApp.mainservice.VideoStreamingService">
+			<property name="serviceType" ref="serviceObj"></property>
+			<property name="deviceType" ref="deviceObj"></property>
+			<property name="videoType" ref="videoObj"></property>
+		</bean>
+		<bean id="serviceObj" class="com.llearning.VideoStreamingApp.services.ServiceType">
+			<property name="ServiceName" value="Prime Video"></property>
+		</bean>
+		<bean id="deviceObj" class="com.llearning.VideoStreamingApp.devices.DeviceType">
+			<property name="DeviceName" value="Mobile"></property>
+		</bean>
+		<bean id="videoObj" class="com.llearning.VideoStreamingApp.VideoType">
+			<property name="VideoName" value="Gulabo Sitabo"></property>
+		</bean>
+</beans>
